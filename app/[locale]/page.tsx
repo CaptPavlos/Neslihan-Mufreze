@@ -32,7 +32,7 @@ export default async function Home({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Neslihan Müfreze",
-    url: "https://neslihanmufreze.com",
+    url: "https://www.neslihanmufreze.com",
     jobTitle: "Unlimited Dynamic Positioning Operator",
     description: t("Metadata.description"),
     nationality: "Turkish",
@@ -55,7 +55,7 @@ export default async function Home({ params }: Props) {
       name: "Neslihan Müfreze",
     },
     description: t("Consulting.description"),
-    url: "https://neslihanmufreze.com/#consulting",
+    url: "https://www.neslihanmufreze.com/#consulting",
     areaServed: [
       {
         "@type": "Country",

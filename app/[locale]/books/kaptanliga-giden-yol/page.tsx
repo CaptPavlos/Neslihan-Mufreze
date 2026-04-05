@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: {
-      canonical: "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
+      canonical: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
       languages: {
-        tr: "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
-        en: "https://neslihanmufreze.com/en/books/kaptanliga-giden-yol",
-        "x-default": "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
+        tr: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
+        en: "https://www.neslihanmufreze.com/en/books/kaptanliga-giden-yol",
+        "x-default": "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
       },
     },
     openGraph: {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale === "tr" ? "tr_TR" : "en_US",
       alternateLocale: locale === "tr" ? ["en_US"] : ["tr_TR"],
-      url: "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
+      url: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
       images: [
         {
           url: "/api/og?title=Kaptanl%C4%B1%C4%9Fa%20Giden%20Yol&subtitle=T%C3%BCrk%20Denizcilik%20Kariyer%20Rehberi",
@@ -97,19 +97,19 @@ export default async function KaptanligaGidenYol({ params }: Props) {
     author: {
       "@type": "Person",
       name: "Neslihan Müfreze",
-      url: "https://neslihanmufreze.com",
+      url: "https://www.neslihanmufreze.com",
     },
     description: t("tagline"),
     inLanguage: "tr",
     numberOfPages: 180,
     bookFormat: "https://schema.org/EBook",
-    url: "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
+    url: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
     offers: {
       "@type": "Offer",
       price: "29",
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
-      url: "https://neslihanmufreze.com/books/kaptanliga-giden-yol",
+      url: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
     },
   };
 
@@ -164,7 +164,7 @@ export default async function KaptanligaGidenYol({ params }: Props) {
 
         <BookCheckout
           priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_KAPTANLIGA ?? ""}
-          successUrl="https://neslihanmufreze.com/books/kaptanliga-giden-yol/success"
+          successUrl="https://www.neslihanmufreze.com/books/kaptanliga-giden-yol/success"
           bookTitle={t("title")}
         />
 

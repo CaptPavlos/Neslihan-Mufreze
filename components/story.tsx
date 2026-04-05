@@ -9,8 +9,8 @@ export function Story() {
   const t = useTranslations("Story");
 
   const STATS = [
-    { value: "72K+", label: t("statFollowers") },
-    { value: "15+", label: t("statYears") },
+    { value: "127K+", label: t("statFollowers") },
+    { value: "12+", label: t("statYears") },
     { value: "1st", label: t("statFirst") },
   ];
 

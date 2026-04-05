@@ -29,16 +29,16 @@ export async function generateMetadata({
       template: `%s | Neslihan Müfreze`,
     },
     description: t("description"),
-    metadataBase: new URL("https://neslihanmufreze.com"),
+    metadataBase: new URL("https://www.neslihanmufreze.com"),
     alternates: {
       canonical:
         locale === "tr"
-          ? "https://neslihanmufreze.com"
-          : `https://neslihanmufreze.com/en`,
+          ? "https://www.neslihanmufreze.com"
+          : `https://www.neslihanmufreze.com/en`,
       languages: {
-        tr: "https://neslihanmufreze.com",
-        en: "https://neslihanmufreze.com/en",
-        "x-default": "https://neslihanmufreze.com",
+        tr: "https://www.neslihanmufreze.com",
+        en: "https://www.neslihanmufreze.com/en",
+        "x-default": "https://www.neslihanmufreze.com",
       },
     },
     openGraph: {
@@ -47,8 +47,8 @@ export async function generateMetadata({
       alternateLocale: locale === "tr" ? ["en_US"] : ["tr_TR"],
       url:
         locale === "tr"
-          ? "https://neslihanmufreze.com"
-          : "https://neslihanmufreze.com/en",
+          ? "https://www.neslihanmufreze.com"
+          : "https://www.neslihanmufreze.com/en",
       siteName: "Neslihan Müfreze",
       title: t("title"),
       description: t("description"),

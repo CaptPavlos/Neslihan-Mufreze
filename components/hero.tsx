@@ -85,7 +85,7 @@ export function Hero() {
         {t("coordinates")}
       </motion.span>
 
-      <div className="relative z-[2] mx-auto max-w-7xl px-6 py-32 md:py-0 flex flex-col items-center text-center">
+      <div className="relative z-[2] mx-auto max-w-7xl px-6 py-32 md:py-0 flex flex-col items-start text-left">
         <motion.p
           className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-gold-dim mb-6"
           {...stagger(0.3)}
@@ -110,7 +110,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-wrap justify-center gap-4"
+          className="mt-10 flex flex-wrap justify-start gap-4"
           {...stagger(0.9)}
         >
           <Link

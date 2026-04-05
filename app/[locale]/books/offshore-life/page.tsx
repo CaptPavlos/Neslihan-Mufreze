@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: {
-      canonical: "https://neslihanmufreze.com/books/offshore-life",
+      canonical: "https://www.neslihanmufreze.com/books/offshore-life",
       languages: {
-        tr: "https://neslihanmufreze.com/books/offshore-life",
-        en: "https://neslihanmufreze.com/en/books/offshore-life",
-        "x-default": "https://neslihanmufreze.com/books/offshore-life",
+        tr: "https://www.neslihanmufreze.com/books/offshore-life",
+        en: "https://www.neslihanmufreze.com/en/books/offshore-life",
+        "x-default": "https://www.neslihanmufreze.com/books/offshore-life",
       },
     },
     openGraph: {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale === "tr" ? "tr_TR" : "en_US",
       alternateLocale: locale === "tr" ? ["en_US"] : ["tr_TR"],
-      url: "https://neslihanmufreze.com/books/offshore-life",
+      url: "https://www.neslihanmufreze.com/books/offshore-life",
       images: [
         {
           url: "/api/og?title=Offshore%20Life&subtitle=Bilingual%20Guide%20to%20Life%20at%20Sea",
@@ -98,19 +98,19 @@ export default async function OffshoreLife({ params }: Props) {
     author: {
       "@type": "Person",
       name: "Neslihan Müfreze",
-      url: "https://neslihanmufreze.com",
+      url: "https://www.neslihanmufreze.com",
     },
     description: t("description"),
     inLanguage: ["en", "tr"],
     numberOfPages: 150,
     bookFormat: "https://schema.org/EBook",
-    url: "https://neslihanmufreze.com/books/offshore-life",
+    url: "https://www.neslihanmufreze.com/books/offshore-life",
     offers: {
       "@type": "Offer",
       price: "24",
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
-      url: "https://neslihanmufreze.com/books/offshore-life",
+      url: "https://www.neslihanmufreze.com/books/offshore-life",
     },
   };
 
@@ -158,7 +158,7 @@ export default async function OffshoreLife({ params }: Props) {
 
         <BookCheckout
           priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_OFFSHORE ?? ""}
-          successUrl="https://neslihanmufreze.com/books/offshore-life/success"
+          successUrl="https://www.neslihanmufreze.com/books/offshore-life/success"
           bookTitle={t("title")}
         />
 
