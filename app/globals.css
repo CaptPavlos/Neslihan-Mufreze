@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ============================================
+   Design System — Neslihan Müfreze
+   All tokens defined via Tailwind v4 @theme
+   ============================================ */
+
+@theme inline {
+  /* ---- Navy palette ---- */
+  --color-navy-deepest: #070d1a;
+  --color-navy-deep: #0b1628;
+  --color-navy: #0f1d36;
+  --color-navy-mid: #162a4a;
+  --color-navy-light: #1e3a5f;
+
+  /* ---- Slate / Steel ---- */
+  --color-slate: #3d5a80;
+  --color-steel: #7c98b6;
+  --color-mist: #b8cce0;
+  --color-pearl: #dce8f0;
+
+  /* ---- Gold palette ---- */
+  --color-gold: #c9a84c;
+  --color-gold-light: #e0c872;
+  --color-gold-dim: #8a7a3a;
+
+  /* ---- Neutrals ---- */
+  --color-bone: #f0f4f7;
+  --color-white: #fafbfc;
+
+  /* ---- Semantic aliases ---- */
+  --color-background: var(--color-navy-deepest);
+  --color-foreground: var(--color-bone);
+  --color-muted: var(--color-slate);
+
+  /* ---- Typography ---- */
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-outfit);
+
+  /* ---- Spacing / sizing shortcuts ---- */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+}
+
+/* ---- Base styles ---- */
+body {
+  background: var(--color-navy-deepest);
+  color: var(--color-bone);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---- Section marker utility ---- */
+.section-marker {
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  border: 1px solid var(--color-gold-dim);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+}
+
+/* ---- Smooth scrolling ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Selection color ---- */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy-deepest);
+}
+
+/* ---- Hero scroll indicator animation ---- */
+@keyframes scrollLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
