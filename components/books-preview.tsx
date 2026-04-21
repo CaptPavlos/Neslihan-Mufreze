@@ -72,7 +72,11 @@ function BookCard({
   comingSoonLabel,
 }: BookCardProps) {
   return (
-    <FadeIn delay={index * 0.15}>
+    <FadeIn
+      delay={index * 0.1}
+      direction={index === 0 ? "right" : "left"}
+      duration={0.6}
+    >
       <div className="flex flex-col items-center gap-6 rounded-sm border border-slate/20 bg-navy-deep/40 p-8 sm:flex-row sm:items-start sm:gap-10">
         <MiniBookMockup title={title} from={gradientFrom} to={gradientTo} />
         <div className="flex flex-col items-center text-center sm:items-start sm:text-left">

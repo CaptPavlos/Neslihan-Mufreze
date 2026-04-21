@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function Footer() {
   const t = useTranslations("Footer");
@@ -26,8 +27,9 @@ export function Footer() {
 
   return (
     <footer className="bg-navy-deep border-t border-slate/20">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <FadeIn direction="none" duration={0.6}>
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="font-serif text-xl tracking-wide text-bone hover:text-gold transition-colors">
               Neslihan Müfreze
@@ -74,6 +76,7 @@ export function Footer() {
         </div>
       </div>
 
+      </FadeIn>
       <div className="border-t border-slate/20">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-bone/40">&copy; {new Date().getFullYear()} {t("copyright")}</p>

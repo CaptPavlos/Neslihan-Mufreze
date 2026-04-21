@@ -44,7 +44,13 @@ export function Consulting() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.1} className="h-full">
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, scale: 0.95 }}
+            whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
+            className="h-full"
+          >
             <div className="relative flex h-full flex-col rounded-sm border-2 border-gold bg-gold/5 p-8 sm:p-10">
               <h3 className="font-serif text-2xl text-bone sm:text-3xl">{t("sessionTitle")}</h3>
               <p className="mt-1 text-sm uppercase tracking-[0.2em] text-bone/50 font-sans">
@@ -102,7 +108,7 @@ export function Consulting() {
                 </Button>
               </a>
             </div>
-          </FadeIn>
+          </motion.div>
         </div>
       </div>
     </section>

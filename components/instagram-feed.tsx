@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getInstagramPosts } from "@/lib/instagram";
 import { InstagramFeedGrid } from "@/components/instagram-feed-grid";
-import { InstagramImage } from "@/components/instagram-image";
 import { SectionMarker } from "@/components/ui/section-marker";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -37,15 +36,7 @@ export async function InstagramFeed() {
           </div>
         </FadeIn>
 
-        {posts.length > 0 ? (
-          <InstagramFeedGrid posts={posts} />
-        ) : (
-          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <InstagramImage key={i} postIndex={i} size={0} className="aspect-square w-full h-full" />
-            ))}
-          </div>
-        )}
+        <InstagramFeedGrid posts={posts} />
       </div>
     </section>
   );

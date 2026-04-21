@@ -1,17 +1,20 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { motion, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionMarker } from "@/components/ui/section-marker";
+import { StatCounter } from "@/components/ui/stat-counter";
 import { RotatingPortrait } from "@/components/rotating-portrait";
 
 export function Story() {
   const t = useTranslations("Story");
+  const prefersReducedMotion = useReducedMotion();
 
   const STATS = [
-    { value: "142K+", label: t("statFollowers") },
-    { value: "50M+", label: t("statReach") },
-    { value: "9+", label: t("statYears") },
+    { value: 142, suffix: "K+", label: t("statFollowers") },
+    { value: 50, suffix: "M+", label: t("statReach") },
+    { value: 9, suffix: "+", label: t("statYears") },
   ];
 
   const EXPERTISE = [
@@ -81,9 +84,11 @@ export function Story() {
               <div className="mt-10 flex flex-wrap gap-8 md:gap-12">
                 {STATS.map((stat) => (
                   <div key={stat.label}>
-                    <span className="block font-serif text-3xl md:text-4xl text-gold tracking-tight">
-                      {stat.value}
-                    </span>
+                    <StatCounter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      className="block font-serif text-3xl md:text-4xl text-gold tracking-tight"
+                    />
                     <span className="block mt-1 text-xs uppercase tracking-[0.2em] text-bone/50 font-sans">
                       {stat.label}
                     </span>
@@ -101,12 +106,29 @@ export function Story() {
                 {t("expertiseTitle")}
               </h3>
               <ul className="mt-5 space-y-3">
-                {EXPERTISE.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-bone/80 font-sans">
-                    <span className="mt-2 block h-px w-3 flex-shrink-0 bg-gold/60" />
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {EXPERTISE.map((item, i) =>
+                  prefersReducedMotion ? (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm leading-relaxed text-bone/80 font-sans"
+                    >
+                      <span className="mt-2 block h-px w-3 flex-shrink-0 bg-gold/60" />
+                      <span>{item}</span>
+                    </li>
+                  ) : (
+                    <motion.li
+                      key={item}
+                      initial={{ opacity: 0, x: -12 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-60px" }}
+                      transition={{ delay: 0.15 + i * 0.08, duration: 0.45, ease: "easeOut" }}
+                      className="flex items-start gap-3 text-sm leading-relaxed text-bone/80 font-sans"
+                    >
+                      <span className="mt-2 block h-px w-3 flex-shrink-0 bg-gold/60" />
+                      <span>{item}</span>
+                    </motion.li>
+                  ),
+                )}
               </ul>
             </div>
           </FadeIn>
