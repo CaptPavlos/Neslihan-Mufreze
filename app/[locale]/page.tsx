@@ -1,7 +1,9 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
+import { ServicesBooksPreview } from "@/components/services-books-preview";
 import { Story } from "@/components/story";
+import { GalleryStrip } from "@/components/gallery-strip";
 import { InstagramFeed } from "@/components/instagram-feed";
 import { Consulting } from "@/components/consulting";
 import { Testimonials } from "@/components/testimonials";
@@ -81,11 +83,13 @@ export default async function Home({ params }: Props) {
       <Nav />
       <main className="flex-1">
         <Hero />
+        <ServicesBooksPreview />
         <Story />
-        <InstagramFeed />
+        <GalleryStrip />
         <Consulting />
         <Testimonials />
-        <BooksPreview />
+        <BooksPreview comingSoon />
+        <InstagramFeed />
       </main>
       <Footer />
     </>

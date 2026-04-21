@@ -1,6 +1,6 @@
 {
   "Nav": {
-    "herStory": "Her Story",
+    "herStory": "About",
     "instagram": "Instagram",
     "consulting": "Consulting",
     "books": "Books",
@@ -10,60 +10,83 @@
   },
   "Hero": {
     "coordinates": "37°46′N / 29°01′E — Offshore",
-    "eyebrow": "Turkey's First Female Unlimited DPO",
-    "headingStart": "Charting ",
-    "headingHighlight": "Her Own",
-    "headingEnd": " Course",
-    "description": "Maritime officer, bestselling author, and mentor — navigating the offshore industry and inspiring the next generation of women at sea.",
-    "discoverStory": "Discover Her Story",
-    "bookSession": "Book a Session",
+    "eyebrow": "Neslihan Müfreze · DP Operator",
+    "headingStart": "From ",
+    "headingHighlight": "Hatay to Offshore.",
+    "headingEnd": "",
+    "description": "I started as a student from Hatay, with no contacts at sea and no maritime family. A decade later, I'm a Dynamic Positioning Operator in the international offshore industry. If you're trying to find your way in, I can help — with clarity, not theory.",
+    "bookCall": "Book a Call",
+    "exploreResources": "Explore Resources",
     "scroll": "Scroll"
   },
+  "ServicesBooksPreview": {
+    "consultingTitle": "Consulting",
+    "consultingBody": "One-on-one strategy sessions designed for seafarers who want to enter or advance in the offshore industry.",
+    "consultingCta": "Book a Session",
+    "booksTitle": "Books",
+    "booksBody": "Practical, experience-based guides covering the offshore industry, career paths, and real operational insights.",
+    "booksCta": "Explore Books"
+  },
   "Story": {
-    "sectionMarker": "Her Story",
+    "sectionMarker": "About",
     "headingStart": "From ",
-    "headingHighlight1": "High School Student",
+    "headingHighlight1": "Sea",
     "headingMid": " to ",
-    "headingHighlight2": "DPO",
-    "paragraph1": "Neslihan Müfreze made history as Turkey's first female offshore Unlimited Dynamic Positioning Operator. Starting as a high school student dreaming of the open sea, she navigated a career path that few women had walked before — earning her unlimited DPO certification and proving that the open sea recognizes skill, not gender.",
-    "paragraph2": "Today, she shares over twelve years of offshore experience through her bestselling books, a thriving social media presence reaching more than 127,000 followers, and one-on-one mentorship for aspiring maritime professionals. Her mission: to chart a clearer course for the next generation of women at sea.",
-    "statFollowers": "Followers",
-    "statYears": "Years at Sea",
-    "statFirst": "Female Unlimited DPO"
+    "headingHighlight2": "Strategy",
+    "paragraph1": "I'm Neslihan Müfreze, a Dynamic Positioning Operator in the international offshore industry.",
+    "paragraph2": "I grew up in Hatay, in the south of Turkey. I had no family at sea, no contacts in maritime, and no one in my circle who knew the industry. I found out about Dynamic Positioning from an internet search on a Turkish PSV company — and that was the first time the word 'offshore' meant something real to me.",
+    "paragraph3": "I traveled to a training center in Ukraine for the basic DP course, and somehow managed to land a first job on a PSV. From there it went to drillships, then commissioning projects in Norway, and eventually newbuildings in Geoje, South Korea.",
+    "paragraph4Line1": "This is not a theoretical industry.",
+    "paragraph4Line2": "It's operational.",
+    "paragraph4Line3": "And experience defines everything.",
+    "expertiseTitle": "Expertise",
+    "expertise1": "Offshore & DP Operations",
+    "expertise2": "DP3 Systems & Commissioning",
+    "expertise3": "International Vessel Projects",
+    "expertise4": "Marine Procedures & Safety Systems",
+    "whatIOfferTitle": "What I Offer",
+    "whatIOfferIntro": "I provide structured, experience-based insight into the offshore industry.",
+    "whatIOfferLine1": "No assumptions.",
+    "whatIOfferLine2": "No surface-level guidance.",
+    "whatIOfferLine3": "Only what actually works — in real operations.",
+    "whatIOfferOutro": "Through content, publications, and private consultancy, I help maritime professionals position themselves correctly within the global offshore sector.",
+    "perspectiveTitle": "Perspective",
+    "perspectiveLine1": "Access to the right information changes timelines.",
+    "perspectiveLine2": "In an industry where most people lose years trying to figure things out, clarity becomes a competitive advantage.",
+    "perspectiveLine3": "That clarity is what I deliver.",
+    "statFollowers": "Global Audience",
+    "statReach": "Monthly Reach",
+    "statYears": "Years Experience",
+    "statFirst": "First Female Unlimited DPO"
+  },
+  "Gallery": {
+    "sectionMarker": "On the Job",
+    "heading": "Offshore, in Frame",
+    "description": "Moments from the field — vessels, operations, and rotations across international projects.",
+    "photoAlt": "Neslihan Müfreze offshore — photo {index}"
   },
   "Instagram": {
     "sectionMarker": "Instagram",
     "heading": "Life Offshore",
     "follow": "Follow",
-    "stats": "127K Followers · 850+ Posts · High Engagement"
+    "stats": "142K+ Followers · 50M+ Monthly Reach · Global Audience"
   },
   "Consulting": {
     "sectionMarker": "Consulting",
     "heading": "Navigate Your Maritime Career",
     "description": "Book a one-on-one session with Turkey's first female offshore Unlimited DPO. Get the guidance you need to advance your career at sea.",
-    "bookAndPay": "Book & Pay",
-    "tier1Name": "Quick Check-In",
-    "tier1Duration": "30 min",
-    "tier1Description": "A focused session to answer your most pressing questions about offshore careers, DP certification, or maritime pathways.",
-    "tier1Feature1": "30-minute video call",
-    "tier1Feature2": "Career direction Q&A",
-    "tier1Feature3": "Actionable takeaways",
-    "tier2Name": "Career Strategy",
-    "tier2Duration": "60 min",
-    "tier2Description": "Deep dive into your career goals with a personalized roadmap for advancing in the offshore maritime industry.",
-    "tier2Feature1": "60-minute video call",
-    "tier2Feature2": "Personalized career roadmap",
-    "tier2Feature3": "DP certification guidance",
-    "tier2Feature4": "Follow-up summary email",
-    "tier2Badge": "MOST POPULAR",
-    "tier3Name": "Mentorship Package",
-    "tier3Duration": "3 × 60 min",
-    "tier3Description": "Ongoing mentorship over three sessions to build your confidence, refine your strategy, and track your progress.",
-    "tier3Feature1": "Three 60-minute sessions",
-    "tier3Feature2": "Structured mentorship plan",
-    "tier3Feature3": "CV & application review",
-    "tier3Feature4": "Priority email support",
-    "tier3Feature5": "Progress tracking"
+    "sessionTitle": "1:1 Strategy Session",
+    "sessionDuration": "60 min · 1:1 video call",
+    "sessionPrice": "$70",
+    "sessionCurrency": "USD",
+    "sessionDescription": "One focused session. Clarity, direction, and real insights from the offshore field — tailored to where you are and where you want to go.",
+    "includesTitle": "What's Included",
+    "include1": "DP Certification Advice",
+    "include2": "Optimal Career Path",
+    "include3": "Types of Offshore Vessels — Pros & Cons",
+    "include4": "Contacts of Companies to Start From",
+    "include5": "Specific Advice for Turkish Sailors",
+    "bookSession": "Book a Session"
   },
   "Testimonials": {
     "sectionMarker": "Testimonials",
@@ -81,7 +104,7 @@
   "Footer": {
     "description": "Turkey's first female offshore Unlimited DPO. Author, maritime professional, and consultant sharing her journey through books and mentorship.",
     "navigate": "Navigate",
-    "herStory": "Her Story",
+    "herStory": "About",
     "instagram": "Instagram",
     "consulting": "Consulting",
     "contact": "Contact",
@@ -93,6 +116,7 @@
   },
   "BooksPreview": {
     "sectionMarker": "Books",
+    "comingSoon": "Coming Soon",
     "book1Title": "Kaptanlığa Giden Yol",
     "book1Tagline": "The definitive Turkish maritime career guide — from cadet to captain.",
     "book1Price": "€29",
@@ -108,10 +132,14 @@
     "securePayment": "Secure payment · Instant download · No account required",
     "tryAgain": "Try again"
   },
+  "Common": {
+    "comingSoon": "Coming Soon"
+  },
   "Book1": {
     "metaTitle": "Kaptanlığa Giden Yol — Turkish Maritime Career Guide",
     "metaDescription": "A comprehensive guide to shape your maritime career, from Turkey's first female offshore Unlimited DPO Neslihan Müfreze. 10 chapters, ~180 pages.",
-    "ctaLabel": "Buy Now",
+    "ctaLabel": "Coming Soon",
+    "comingSoon": "Coming Soon",
     "title": "Kaptanlığa Giden Yol",
     "tagline": "A comprehensive guide from Turkey's first female offshore Unlimited DPO to shape your maritime career.",
     "format": "Digital (PDF)",
@@ -119,7 +147,7 @@
     "pages": "~180",
     "delivery": "Instant Download",
     "price": "€29",
-    "heroCta": "Buy Now",
+    "heroCta": "Coming Soon",
     "tocSectionMarker": "Table of Contents",
     "tocIntro": "What You'll Learn",
     "tocDescription": "Across 10 chapters, you'll find the knowledge and strategies you need at every stage of your career, from entering the maritime profession to offshore captaincy.",
@@ -164,8 +192,8 @@
     "faq5Q": "Can I contact the author?",
     "faq5A": "Yes! You can reach Neslihan Müfreze through the contact section on the homepage or via social media accounts. One-on-one consulting services are also available.",
     "ctaHeading": "Shape Your Maritime Career",
-    "ctaSubtitle": "Everything you need on the path to captaincy is in this book. Get started now.",
-    "ctaButton": "Buy Now"
+    "ctaSubtitle": "Everything you need on the path to captaincy is in this book. A new release is on the way.",
+    "ctaButton": "Coming Soon"
   },
   "Book1Success": {
     "metaTitle": "Thank You — Kaptanlığa Giden Yol",
@@ -178,14 +206,15 @@
   "Book2": {
     "metaTitle": "Offshore Life — Bilingual Guide to Life at Sea",
     "metaDescription": "A bilingual (English & Türkçe) guide to offshore life — from your first hitch to DP operations, safety culture, and thriving on rotation. ~150 pages, €24.",
-    "ctaLabel": "Buy Now",
+    "ctaLabel": "Coming Soon",
+    "comingSoon": "Coming Soon",
     "title": "Offshore Life",
     "subtitle": "Açık Deniz Hayatı",
     "description": "A bilingual guide to life at sea — from your first hitch to DP operations, safety culture, and thriving on rotation. Written in English & Türkçe for the global maritime community.",
     "price": "€24",
     "pages": "~150 pages",
     "language": "English & Türkçe",
-    "buyNow": "Buy Now",
+    "buyNow": "Coming Soon",
     "sectionTitle": "10 Chapters on Life at Sea",
     "ch1Title": "Why Offshore?",
     "ch1Desc": "What draws people to life at sea — the freedom, the pay, the adventure — and the realities nobody tells you about upfront.",
@@ -234,12 +263,12 @@
     "faq3Q": "I'm not a deck officer — is this book still relevant for me?",
     "faq3A": "Absolutely. While the author's background is in deck and DP operations, the majority of the book covers universal offshore topics: safety culture, crew dynamics, rotation life, weather awareness, and career development. Engineers, ETOs, and catering staff will all find value here.",
     "faq4Q": "How do I purchase and receive the book?",
-    "faq4A": "Click 'Buy Now' to proceed to our secure Stripe checkout. After payment, you'll receive an email with a download link for the digital edition. If you ordered a physical copy, it will be shipped within 3–5 business days to your address.",
-    "faq5Q": "Can I buy this as a gift for someone starting their offshore career?",
-    "faq5A": "Yes! During checkout you can enter a different email address for delivery of the digital edition. For physical copies, simply use the recipient's shipping address. It's a perfect gift for cadets, new graduates, or anyone curious about life at sea.",
+    "faq4A": "The book is currently in production. Join the waitlist to be notified the moment it launches — you'll get priority access and launch pricing.",
+    "faq5Q": "Can I pre-order this as a gift for someone starting their offshore career?",
+    "faq5A": "Pre-orders will open when the book is ready for release. Follow along on Instagram or reach out through the contact section to be among the first to know.",
     "ctaHeading": "Start Your Offshore Journey",
-    "ctaSubtitle": "Discover what life at sea is really like — the watches, the weather, the crew, and the career. Written by someone who lives it every day.",
-    "ctaButton": "Buy Now — Instant Download →"
+    "ctaSubtitle": "Discover what life at sea is really like — the watches, the weather, the crew, and the career. Coming soon.",
+    "ctaButton": "Coming Soon"
   },
   "Book2Success": {
     "metaTitle": "Thank You — Offshore Life",
@@ -259,7 +288,7 @@
   },
   "Metadata": {
     "title": "Neslihan Müfreze — Offshore DPO & Author",
-    "description": "Turkey's first female offshore Unlimited DPO. Author, maritime professional, and consultant sharing her journey through books and mentorship."
+    "description": "Built at sea, proven offshore. Clarity, strategy, and real experience from the field — not theory. Turkey's first female Unlimited DPO."
   },
   "LanguageSwitcher": {
     "tr": "TR",

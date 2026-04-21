@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { fetchInstagramPosts } from "@/lib/instagram";
+import { getInstagramPosts } from "@/lib/instagram";
 
 export async function GET() {
   try {
-    const posts = await fetchInstagramPosts(8);
+    const posts = await getInstagramPosts(12);
     return NextResponse.json({ posts });
   } catch (err) {
     const message =

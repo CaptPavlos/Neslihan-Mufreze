@@ -17,6 +17,8 @@ interface BookHeroProps {
   ctaHref: string;
   coverGradientFrom?: string;
   coverGradientTo?: string;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
 }
 
 function BookMockup({
@@ -87,6 +89,8 @@ export function BookHero({
   ctaHref,
   coverGradientFrom = "var(--color-navy)",
   coverGradientTo = "var(--color-navy-deep)",
+  comingSoon = false,
+  comingSoonLabel,
 }: BookHeroProps) {
   const t = useTranslations("BookHero");
   const prefersReducedMotion = useReducedMotion();
@@ -146,11 +150,19 @@ export function BookHero({
               ))}
             </motion.div>
 
-            <motion.div className="mt-8 flex items-center gap-6" {...stagger(0.4)}>
-              <span className="font-serif text-4xl text-gold">{price}</span>
-              <Link href={ctaHref}>
-                <Button variant="primary" size="lg">{ctaLabel}</Button>
-              </Link>
+            <motion.div className="mt-8 flex flex-wrap items-center gap-6" {...stagger(0.4)}>
+              {comingSoon ? (
+                <span className="inline-flex items-center rounded-full border border-gold/50 bg-gold/10 px-4 py-2 font-serif text-lg tracking-wide text-gold">
+                  {comingSoonLabel ?? ctaLabel}
+                </span>
+              ) : (
+                <>
+                  <span className="font-serif text-4xl text-gold">{price}</span>
+                  <Link href={ctaHref}>
+                    <Button variant="primary" size="lg">{ctaLabel}</Button>
+                  </Link>
+                </>
+              )}
             </motion.div>
           </div>
         </div>

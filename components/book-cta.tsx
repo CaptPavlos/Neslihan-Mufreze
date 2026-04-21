@@ -10,9 +10,19 @@ interface BookCtaProps {
   price: string;
   ctaLabel: string;
   ctaHref: string;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
 }
 
-export function BookCta({ heading, subtitle, price, ctaLabel, ctaHref }: BookCtaProps) {
+export function BookCta({
+  heading,
+  subtitle,
+  price,
+  ctaLabel,
+  ctaHref,
+  comingSoon = false,
+  comingSoonLabel,
+}: BookCtaProps) {
   return (
     <section className="py-(--spacing-section) sm:py-(--spacing-section-sm)">
       <div className="mx-auto max-w-7xl px-6">
@@ -26,10 +36,18 @@ export function BookCta({ heading, subtitle, price, ctaLabel, ctaHref }: BookCta
             <h3 className="font-serif text-3xl text-bone sm:text-4xl">{heading}</h3>
             <p className="mx-auto mt-4 max-w-xl text-base text-bone/60">{subtitle}</p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-              <span className="font-serif text-4xl text-gold">{price}</span>
-              <Link href={ctaHref}>
-                <Button variant="primary" size="lg">{ctaLabel}</Button>
-              </Link>
+              {comingSoon ? (
+                <span className="inline-flex items-center rounded-full border border-gold/50 bg-gold/10 px-6 py-3 font-serif text-xl tracking-wide text-gold">
+                  {comingSoonLabel ?? ctaLabel}
+                </span>
+              ) : (
+                <>
+                  <span className="font-serif text-4xl text-gold">{price}</span>
+                  <Link href={ctaHref}>
+                    <Button variant="primary" size="lg">{ctaLabel}</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </FadeIn>

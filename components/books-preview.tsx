@@ -55,9 +55,22 @@ interface BookCardProps {
   gradientFrom: string;
   gradientTo: string;
   index: number;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
 }
 
-function BookCard({ title, tagline, price, href, learnMore, gradientFrom, gradientTo, index }: BookCardProps) {
+function BookCard({
+  title,
+  tagline,
+  price,
+  href,
+  learnMore,
+  gradientFrom,
+  gradientTo,
+  index,
+  comingSoon = false,
+  comingSoonLabel,
+}: BookCardProps) {
   return (
     <FadeIn delay={index * 0.15}>
       <div className="flex flex-col items-center gap-6 rounded-sm border border-slate/20 bg-navy-deep/40 p-8 sm:flex-row sm:items-start sm:gap-10">
@@ -65,7 +78,13 @@ function BookCard({ title, tagline, price, href, learnMore, gradientFrom, gradie
         <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
           <h3 className="font-serif text-2xl text-bone">{title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-bone/60">{tagline}</p>
-          <span className="mt-3 font-serif text-2xl text-gold">{price}</span>
+          {comingSoon ? (
+            <span className="mt-3 inline-flex items-center rounded-full border border-gold/50 bg-gold/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
+              {comingSoonLabel}
+            </span>
+          ) : (
+            <span className="mt-3 font-serif text-2xl text-gold">{price}</span>
+          )}
           <Link
             href={href}
             className="mt-4 inline-flex items-center text-sm font-medium text-gold hover:text-gold-light transition-colors"
@@ -78,7 +97,11 @@ function BookCard({ title, tagline, price, href, learnMore, gradientFrom, gradie
   );
 }
 
-export function BooksPreview() {
+interface BooksPreviewProps {
+  comingSoon?: boolean;
+}
+
+export function BooksPreview({ comingSoon = false }: BooksPreviewProps) {
   const t = useTranslations("BooksPreview");
 
   return (
@@ -100,6 +123,8 @@ export function BooksPreview() {
             gradientFrom="var(--color-navy)"
             gradientTo="var(--color-navy-deep)"
             index={0}
+            comingSoon={comingSoon}
+            comingSoonLabel={t("comingSoon")}
           />
           <BookCard
             title={t("book2Title")}
@@ -110,6 +135,8 @@ export function BooksPreview() {
             gradientFrom="var(--color-navy-mid)"
             gradientTo="var(--color-navy-deepest)"
             index={1}
+            comingSoon={comingSoon}
+            comingSoonLabel={t("comingSoon")}
           />
         </div>
       </div>

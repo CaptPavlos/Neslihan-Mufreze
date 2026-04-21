@@ -7,7 +7,6 @@ import { BookAuthor } from "@/components/book-author";
 import { BookReviews } from "@/components/book-reviews";
 import { BookFaq } from "@/components/book-faq";
 import { BookCta } from "@/components/book-cta";
-import { BookCheckout } from "@/components/book-checkout";
 import { Footer } from "@/components/footer";
 
 type Props = {
@@ -108,7 +107,7 @@ export default async function KaptanligaGidenYol({ params }: Props) {
       "@type": "Offer",
       price: "29",
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
+      availability: "https://schema.org/PreOrder",
       url: "https://www.neslihanmufreze.com/books/kaptanliga-giden-yol",
     },
   };
@@ -134,6 +133,8 @@ export default async function KaptanligaGidenYol({ params }: Props) {
           ctaHref={BUY_HREF}
           coverGradientFrom="var(--color-navy)"
           coverGradientTo="var(--color-navy-deep)"
+          comingSoon
+          comingSoonLabel={t("comingSoon")}
         />
 
         <BookToc
@@ -162,18 +163,14 @@ export default async function KaptanligaGidenYol({ params }: Props) {
           heading={t("faqHeading")}
         />
 
-        <BookCheckout
-          priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_KAPTANLIGA ?? ""}
-          successUrl="https://www.neslihanmufreze.com/books/kaptanliga-giden-yol/success"
-          bookTitle={t("title")}
-        />
-
         <BookCta
           heading={t("ctaHeading")}
           subtitle={t("ctaSubtitle")}
           price={t("price")}
           ctaLabel={t("ctaButton")}
           ctaHref={BUY_HREF}
+          comingSoon
+          comingSoonLabel={t("comingSoon")}
         />
       </main>
 

@@ -43,8 +43,8 @@ NEXT_PUBLIC_CAL_COM_LINK_30=neslihanmufreze/30min
 NEXT_PUBLIC_CAL_COM_LINK_60=neslihanmufreze/60min
 NEXT_PUBLIC_CAL_COM_LINK_PKG=neslihanmufreze/mentorship
 
-# Instagram (optional — site uses placeholder data without this)
-INSTAGRAM_ACCESS_TOKEN=IGQ...
+# Instagram feed via Behold (https://behold.so)
+NEXT_PUBLIC_BEHOLD_FEED_URL=https://feeds.behold.so/794Co8DTgnS2jsJLJ0jL
 ```
 
 ### Development
@@ -140,11 +140,15 @@ scripts/
 
 ## Instagram Feed
 
-The Instagram feed uses placeholder data by default. To enable live data:
+The Instagram feed is wired to a [Behold](https://behold.so) feed, which aggregates the Instagram
+account server-side and serves a public JSON feed with pre-resized images.
 
-1. Set `INSTAGRAM_ACCESS_TOKEN` in your environment
-2. Run `npx tsx scripts/fetch-instagram.ts` before build
-3. The script outputs to `public/instagram.json`
+1. Set `NEXT_PUBLIC_BEHOLD_FEED_URL` to the Behold feed URL (e.g. `https://feeds.behold.so/<feedId>`).
+2. The site fetches the feed at request time with hourly ISR revalidation (`next: { revalidate: 3600 }`).
+3. If the fetch fails or returns empty, the homepage falls back to the gradient placeholder grid.
+
+For Vercel deployments, add `NEXT_PUBLIC_BEHOLD_FEED_URL` under Settings → Environment Variables for
+Production, Preview, and Development. After setting, redeploy; images auto-refresh every hour.
 
 ## Stripe Setup
 

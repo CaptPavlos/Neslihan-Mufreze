@@ -4,7 +4,12 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 
-const IMAGES = ["/neslihan-story-1.jpg", "/neslihan-story-2.jpg"];
+const IMAGES = [
+  "/neslihan-story-1.jpg",
+  "/neslihan-story-2.jpg",
+  "/photos/photo-1.jpeg",
+  "/photos/photo-4.jpeg",
+];
 const INTERVAL = 5000;
 
 export function RotatingPortrait() {

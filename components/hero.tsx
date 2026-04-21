@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { CALENDLY_URL } from "@/lib/links";
 
 function CompassRose() {
   return (
@@ -113,17 +114,19 @@ export function Hero() {
           className="mt-10 flex flex-wrap justify-start gap-4"
           {...stagger(0.9)}
         >
-          <Link
-            href="/#her-story"
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans"
           >
-            {t("discoverStory")}
-          </Link>
+            {t("bookCall")}
+          </a>
           <Link
-            href="/#consulting"
+            href="/#services-books"
             className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-medium tracking-wide border border-gold text-gold hover:bg-gold/10 transition-colors duration-200 font-sans"
           >
-            {t("bookSession")}
+            {t("exploreResources")}
           </Link>
         </motion.div>
       </div>

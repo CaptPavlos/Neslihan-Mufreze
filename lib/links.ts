@@ -1,0 +1,2 @@
+export const CALENDLY_URL =
+  "https://calendly.com/nmufreze-randevu-al-/new-meeting?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleARUpRhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae53tkSb57E0lon5sppNYalKKLei19Djrns2l2kjKASoHaTexV7vKOV9GjJ_Q_aem_R1iBRd6-Kkmi_An7GoOzpw&utm_id=97760_v0_s00_e0_tv3_a1dennhb9v0jvt";

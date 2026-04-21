@@ -97,7 +97,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <head>
         <link rel="preconnect" href="https://js.stripe.com" />
-        <link rel="preconnect" href="https://cal.com" />
+        <link rel="preconnect" href="https://calendly.com" />
         <link
           rel="preconnect"
           href="https://www.instagram.com"

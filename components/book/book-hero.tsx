@@ -14,6 +14,8 @@ interface BookHeroProps {
   gradient: "navy-gold" | "navy-slate";
   rotateDirection: "cw" | "ccw";
   buyNowLabel?: string;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
 }
 
 function BookMockup({ rotateDirection }: { rotateDirection: "cw" | "ccw" }) {
@@ -71,6 +73,8 @@ export function BookHero({
   gradient,
   rotateDirection,
   buyNowLabel = "Buy Now",
+  comingSoon = false,
+  comingSoonLabel,
 }: BookHeroProps) {
   const gradientClass =
     gradient === "navy-gold"
@@ -117,10 +121,18 @@ export function BookHero({
             </FadeIn>
             <FadeIn delay={0.5}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <span className="font-serif text-4xl text-gold">{price}</span>
-                <button className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans">
-                  {buyNowLabel}
-                </button>
+                {comingSoon ? (
+                  <span className="inline-flex items-center rounded-full border border-gold/50 bg-gold/10 px-5 py-2 font-serif text-lg tracking-wide text-gold">
+                    {comingSoonLabel ?? buyNowLabel}
+                  </span>
+                ) : (
+                  <>
+                    <span className="font-serif text-4xl text-gold">{price}</span>
+                    <button className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans">
+                      {buyNowLabel}
+                    </button>
+                  </>
+                )}
               </div>
             </FadeIn>
           </div>

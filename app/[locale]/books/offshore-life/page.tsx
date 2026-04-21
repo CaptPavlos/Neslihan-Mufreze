@@ -3,7 +3,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { BookNav } from "@/components/book-nav";
 import { BookAuthor } from "@/components/book-author";
 import { BookCta } from "@/components/book-cta";
-import { BookCheckout } from "@/components/book-checkout";
 import { Footer } from "@/components/footer";
 import { BookHero } from "@/components/book/book-hero";
 import { BookChapters, type Chapter } from "@/components/book/book-chapters";
@@ -109,7 +108,7 @@ export default async function OffshoreLife({ params }: Props) {
       "@type": "Offer",
       price: "24",
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
+      availability: "https://schema.org/PreOrder",
       url: "https://www.neslihanmufreze.com/books/offshore-life",
     },
   };
@@ -133,6 +132,8 @@ export default async function OffshoreLife({ params }: Props) {
           gradient="navy-slate"
           rotateDirection="ccw"
           buyNowLabel={t("buyNow")}
+          comingSoon
+          comingSoonLabel={t("comingSoon")}
         />
 
         <BookChapters chapters={CHAPTERS} sectionTitle={t("sectionTitle")} />
@@ -156,18 +157,14 @@ export default async function OffshoreLife({ params }: Props) {
           heading={t("faqHeading")}
         />
 
-        <BookCheckout
-          priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_OFFSHORE ?? ""}
-          successUrl="https://www.neslihanmufreze.com/books/offshore-life/success"
-          bookTitle={t("title")}
-        />
-
         <BookCta
           heading={t("ctaHeading")}
           subtitle={t("ctaSubtitle")}
           price={t("price")}
           ctaLabel={t("ctaButton")}
           ctaHref={BUY_HREF}
+          comingSoon
+          comingSoonLabel={t("comingSoon")}
         />
       </main>
 
