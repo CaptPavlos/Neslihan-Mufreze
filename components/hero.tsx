@@ -95,7 +95,7 @@ export function Hero() {
         </motion.p>
 
         <motion.h1
-          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight max-w-3xl"
+          className="font-serif text-[clamp(2.25rem,6.5vw,4.5rem)] leading-[1.1] tracking-tight max-w-3xl"
           {...stagger(0.5)}
         >
           {t("headingStart")}
@@ -104,7 +104,7 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          className="mt-6 max-w-xl text-base md:text-lg leading-relaxed text-bone/70 font-sans"
+          className="mt-6 max-w-xl text-[clamp(1rem,1.8vw,1.125rem)] leading-relaxed text-bone/70 font-sans"
           {...stagger(0.7)}
         >
           {t("description")}
@@ -118,13 +118,13 @@ export function Hero() {
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans"
+            className="inline-flex min-h-11 items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans"
           >
             {t("bookCall")}
           </a>
           <Link
             href="/#services-books"
-            className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-medium tracking-wide border border-gold text-gold hover:bg-gold/10 transition-colors duration-200 font-sans"
+            className="inline-flex min-h-11 items-center justify-center rounded-sm px-8 py-3.5 text-base font-medium tracking-wide border border-gold text-gold hover:bg-gold/10 transition-colors duration-200 font-sans"
           >
             {t("exploreResources")}
           </Link>

@@ -42,7 +42,7 @@ export function Testimonials() {
         <FadeIn>
           <div className="mb-14 text-center">
             <SectionMarker>{t("sectionMarker")}</SectionMarker>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-bone">{t("heading")}</h2>
+            <h2 className="mt-4 font-serif text-[clamp(1.75rem,4vw,2.25rem)] text-bone">{t("heading")}</h2>
           </div>
         </FadeIn>
 

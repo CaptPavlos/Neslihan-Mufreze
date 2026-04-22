@@ -90,7 +90,7 @@ export function BookHero({
               <SectionMarker>Book</SectionMarker>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 className="mt-6 font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight text-bone">
+              <h1 className="mt-6 font-serif text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.1] tracking-tight text-bone">
                 {title}
               </h1>
             </FadeIn>
@@ -128,7 +128,7 @@ export function BookHero({
                 ) : (
                   <>
                     <span className="font-serif text-4xl text-gold">{price}</span>
-                    <button className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans">
+                    <button className="inline-flex min-h-11 items-center justify-center rounded-sm px-8 py-3.5 text-base font-semibold tracking-wide bg-gold text-navy-deepest hover:bg-gold-light transition-colors duration-200 font-sans">
                       {buyNowLabel}
                     </button>
                   </>

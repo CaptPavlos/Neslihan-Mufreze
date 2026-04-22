@@ -66,7 +66,7 @@ export function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm font-sans text-bone/80 hover:text-gold transition-colors tracking-wide"
+                  className="inline-flex min-h-11 items-center text-sm font-sans text-bone/80 hover:text-gold transition-colors tracking-wide"
                 >
                   {link.label}
                 </Link>
@@ -75,7 +75,7 @@ export function Nav() {
             <li>
               <button
                 onClick={switchLocale}
-                className="text-sm font-sans tracking-wide transition-colors cursor-pointer flex items-center gap-1"
+                className="inline-flex min-h-11 items-center text-sm font-sans tracking-wide transition-colors cursor-pointer gap-1"
               >
                 <span className={locale === "tr" ? "text-gold font-semibold" : "text-bone/50 hover:text-bone/80"}>
                   {tSwitcher("tr")}

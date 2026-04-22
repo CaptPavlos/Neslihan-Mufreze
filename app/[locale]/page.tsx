@@ -70,6 +70,23 @@ export default async function Home({ params }: Props) {
     ],
   };
 
+  const siteUrl = "https://www.neslihanmufreze.com";
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Neslihan Müfreze",
+    url: siteUrl,
+    inLanguage: ["tr-TR", "en-US"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <>
       <script
@@ -79,6 +96,10 @@ export default async function Home({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <Nav />
       <main className="flex-1">

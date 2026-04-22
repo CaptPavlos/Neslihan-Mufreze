@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import type { InstagramPost } from "@/lib/instagram";
@@ -9,9 +10,30 @@ interface InstagramFeedGridProps {
   posts: InstagramPost[];
 }
 
-function FeedTile({ post, index }: { post: InstagramPost; index: number }) {
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return isDesktop;
+}
+
+function FeedTile({
+  post,
+  index,
+  isDesktop,
+}: {
+  post: InstagramPost;
+  index: number;
+  isDesktop: boolean;
+}) {
   const prefersReducedMotion = useReducedMotion();
-  const isAboveFold = index < 6;
+  const isPriority = index < 4;
+  const stagger = isDesktop ? index * 0.05 : Math.min(index, 3) * 0.04;
 
   return (
     <motion.a
@@ -19,19 +41,20 @@ function FeedTile({ post, index }: { post: InstagramPost; index: number }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={post.caption || "View Instagram post"}
-      className="group relative block aspect-square overflow-hidden rounded-sm bg-navy-deep"
+      className="group relative block aspect-square overflow-hidden rounded-sm bg-navy-deep min-h-11"
       initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
       whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+      transition={{ duration: 0.4, delay: stagger, ease: "easeOut" }}
     >
       <Image
         src={post.imageUrl}
         alt={post.caption || "Instagram post"}
         fill
-        sizes="(min-width: 1024px) 25vw, 33vw"
+        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
         className="object-cover transition-transform duration-500 group-hover:scale-105"
-        loading={isAboveFold ? "eager" : "lazy"}
+        priority={isPriority}
+        loading={isPriority ? "eager" : "lazy"}
       />
 
       {post.mediaType === "VIDEO" && (
@@ -77,10 +100,11 @@ function FeedTile({ post, index }: { post: InstagramPost; index: number }) {
 }
 
 export function InstagramFeedGrid({ posts }: InstagramFeedGridProps) {
+  const isDesktop = useIsDesktop();
   return (
-    <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
       {posts.map((post, i) => (
-        <FeedTile key={post.id} post={post} index={i} />
+        <FeedTile key={post.id} post={post} index={i} isDesktop={isDesktop} />
       ))}
     </div>
   );

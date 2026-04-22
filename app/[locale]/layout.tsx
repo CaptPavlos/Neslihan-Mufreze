@@ -74,10 +74,10 @@ export async function generateMetadata({
       follow: true,
     },
     other: {
-      "geo.region": "TR",
-      "geo.placename": "Turkey",
-      "geo.position": "37.7749;29.0167",
-      ICBM: "37.7749, 29.0167",
+      "geo.region": "TR-31",
+      "geo.placename": "Hatay, Turkey",
+      "geo.position": "36.2025;36.1606",
+      ICBM: "36.2025, 36.1606",
     },
   };
 }
@@ -98,6 +98,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         <link rel="preconnect" href="https://js.stripe.com" />
         <link rel="preconnect" href="https://calendly.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="preconnect" href="https://feeds.behold.so" crossOrigin="anonymous" />
         <link
           rel="preconnect"
           href="https://www.instagram.com"

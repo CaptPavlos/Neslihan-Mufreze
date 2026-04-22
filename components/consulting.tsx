@@ -26,7 +26,7 @@ export function Consulting() {
         <FadeIn>
           <div className="mb-14 text-center">
             <SectionMarker>{t("sectionMarker")}</SectionMarker>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-bone">{t("heading")}</h2>
+            <h2 className="mt-4 font-serif text-[clamp(1.75rem,4vw,2.25rem)] text-bone">{t("heading")}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-bone/60">{t("description")}</p>
           </div>
         </FadeIn>

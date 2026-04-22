@@ -40,7 +40,7 @@ export function Story() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <h2 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
+              <h2 className="mt-6 font-serif text-[clamp(1.875rem,4.5vw,3rem)] leading-tight tracking-tight">
                 {t("headingStart")}
                 <em className="text-gold italic">{t("headingHighlight1")}</em>
                 {t("headingMid")}

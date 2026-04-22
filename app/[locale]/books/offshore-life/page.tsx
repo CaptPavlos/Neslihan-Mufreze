@@ -89,6 +89,9 @@ export default async function OffshoreLife({ params }: Props) {
     { question: t("faq5Q"), answer: t("faq5A") },
   ];
 
+  const siteUrl = "https://www.neslihanmufreze.com";
+  const bookUrl = `${siteUrl}${locale === "tr" ? "" : "/en"}/books/offshore-life`;
+
   const bookJsonLd = {
     "@context": "https://schema.org",
     "@type": "Book",
@@ -97,20 +100,45 @@ export default async function OffshoreLife({ params }: Props) {
     author: {
       "@type": "Person",
       name: "Neslihan Müfreze",
-      url: "https://www.neslihanmufreze.com",
+      url: siteUrl,
     },
     description: t("description"),
     inLanguage: ["en", "tr"],
     numberOfPages: 150,
     bookFormat: "https://schema.org/EBook",
-    url: "https://www.neslihanmufreze.com/books/offshore-life",
+    url: bookUrl,
     offers: {
       "@type": "Offer",
       price: "24",
       priceCurrency: "EUR",
       availability: "https://schema.org/PreOrder",
-      url: "https://www.neslihanmufreze.com/books/offshore-life",
+      url: bookUrl,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: locale === "tr" ? "Ana Sayfa" : "Home",
+        item: locale === "tr" ? siteUrl : `${siteUrl}/en`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: locale === "tr" ? "Kitaplar" : "Books",
+        item: locale === "tr" ? siteUrl : `${siteUrl}/en`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Offshore Life",
+        item: bookUrl,
+      },
+    ],
   };
 
   return (
@@ -118,6 +146,10 @@ export default async function OffshoreLife({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bookJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <BookNav ctaHref={BUY_HREF} ctaLabel={t("ctaLabel")} />
 

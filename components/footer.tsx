@@ -42,7 +42,7 @@ export function Footer() {
             <ul className="space-y-3">
               {NAVIGATE_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</Link>
+                  <Link href={link.href} className="inline-flex min-h-11 items-center text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -53,7 +53,7 @@ export function Footer() {
             <ul className="space-y-3">
               {BOOK_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</Link>
+                  <Link href={link.href} className="inline-flex min-h-11 items-center text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -65,9 +65,9 @@ export function Footer() {
               {CONNECT_LINKS.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</a>
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</a>
                   ) : (
-                    <a href={link.href} className="text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</a>
+                    <a href={link.href} className="inline-flex min-h-11 items-center text-sm text-bone/60 hover:text-gold transition-colors">{link.label}</a>
                   )}
                 </li>
               ))}

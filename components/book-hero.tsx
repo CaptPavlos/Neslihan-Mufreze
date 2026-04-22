@@ -133,7 +133,7 @@ export function BookHero({
               <span className="text-gold-dim">{title}</span>
             </motion.nav>
 
-            <motion.h1 className="font-serif text-4xl leading-tight text-bone sm:text-5xl" {...stagger(0.1)}>
+            <motion.h1 className="font-serif text-[clamp(2rem,5.5vw,3rem)] leading-tight text-bone" {...stagger(0.1)}>
               {title}
             </motion.h1>
 

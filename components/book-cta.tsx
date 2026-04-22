@@ -33,7 +33,7 @@ export function BookCta({
               background: "linear-gradient(135deg, var(--color-navy-mid), var(--color-navy))",
             }}
           >
-            <h3 className="font-serif text-3xl text-bone sm:text-4xl">{heading}</h3>
+            <h3 className="font-serif text-[clamp(1.75rem,4.5vw,2.25rem)] text-bone">{heading}</h3>
             <p className="mx-auto mt-4 max-w-xl text-base text-bone/60">{subtitle}</p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
               {comingSoon ? (
